@@ -1,11 +1,12 @@
-# nagios-plugins-timezone
+# prtg-plugins-timezone
 
-Nagios plugin to check the current timezone.
-
+PRTG plugin to check the current timezone.
+Based on [ melmorabity's nagios-plugin-timezone](https://github.com/melmorabity/nagios-plugin-timezone)
 
 ## Authors
 
 Mohamed El Morabity <melmorabity -(at)- fedoraproject.org>
+Christian Friedli < christian.friedli -(at)- id.unibe.ch>
 
 ## Usage
 
