@@ -78,7 +78,7 @@ parse_arguments() {
 
 
 check_timezone() {
-    echo "2:1: Warning: Still under developement"
+    echo "2:1: Warning: currently in development"
 #   # Get current timezone
 #   if ! [[ -L /etc/localtime ]]; then
 #       echo "Unable to retrieve current timezone"

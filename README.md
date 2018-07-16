@@ -1,6 +1,6 @@
 # prtg-plugin-timezone
 
-Still under developement! 
+currently in development! 
 
 PRTG plugin to check the current timezone.
 
