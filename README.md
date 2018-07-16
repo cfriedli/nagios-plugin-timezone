@@ -1,4 +1,4 @@
-# prtg-plugins-timezone
+# prtg-plugin-timezone
 
 PRTG plugin to check the current timezone.
 Based on [ melmorabity's nagios-plugin-timezone](https://github.com/melmorabity/nagios-plugin-timezone)
