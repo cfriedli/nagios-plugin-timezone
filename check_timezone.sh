@@ -18,8 +18,6 @@
 PLUGIN_FILENAME=${0##*/}
 PLUGIN_DIR=$(dirname "$0")
 
-. $PLUGIN_DIR/utils.sh
-
 ERROR_STATE=$STATE_CRITICAL
 ERROR_STATE_LABEL="ERROR"
 
@@ -80,21 +78,20 @@ parse_arguments() {
 
 
 check_timezone() {
-    # Get current timezone
-    if ! [[ -L /etc/localtime ]]; then
-	echo "Unable to retrieve current timezone"
-	exit $STATE_UNKNOWN
-    fi
-
-    localtime=$(realpath /etc/localtime)
-    current_timezone=${localtime#*/zoneinfo/}
-    if [[ "$current_timezone" != "$EXPECTED_TIMEZONE" ]]; then
-	echo "$ERROR_STATE_LABEL: Current timezone is $current_timezone (expected timezone: $EXPECTED_TIMEZONE)"
-	exit $ERROR_STATE
-    fi
-
-    echo "OK: Current timezone is $EXPECTED_TIMEZONE"
-    exit $STATE_OK
+    echo "2:1: Warning: Still under developement"
+#   # Get current timezone
+#   if ! [[ -L /etc/localtime ]]; then
+#       echo "Unable to retrieve current timezone"
+#       exit $STATE_UNKNOWN
+#   fi
+#
+#   localtime=$(realpath /etc/localtime)
+#   current_timezone=${localtime#*/zoneinfo/}
+#   if [[ "$current_timezone" != "$EXPECTED_TIMEZONE" ]]; then
+#       echo "2:1: Current timezone is $current_timezone (expected timezone: $EXPECTED_TIMEZONE)"
+#   fi
+#
+#   echo "0:0 OK: Current timezone is $EXPECTED_TIMEZONE"
 }
 
 
