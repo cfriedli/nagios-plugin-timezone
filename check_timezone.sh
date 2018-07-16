@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Copyright © 2017 Mohamed El Morabity <melmorabity@fedoraproject.com>
+# Copyright © 2018 Christian Friedli <christian.friedli@id.unibe.ch>
 #
 # This module is free software: you can redistribute it and/or modify it under
 # the terms of the GNU General Public License as published by the Free Software
