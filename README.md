@@ -8,7 +8,6 @@ Based on [ melmorabity's nagios-plugin-timezone](https://github.com/melmorabity/
 
 ## Authors
 
-Mohamed El Morabity <melmorabity -(at)- fedoraproject.org>
 Christian Friedli < christian.friedli -(at)- id.unibe.ch>
 
 ## Usage
