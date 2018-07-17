@@ -1,7 +1,5 @@
 # prtg-plugin-timezone
 
-currently in development! 
-
 PRTG plugin to check the current timezone.
 
 Based on [ melmorabity's nagios-plugin-timezone](https://github.com/melmorabity/nagios-plugin-timezone)
@@ -25,6 +23,3 @@ Christian Friedli < christian.friedli -(at)- id.unibe.ch>
 
     $ ./check_timezone.sh UTC
     ERROR: Current timezone is Europe/Paris (expected timezone: UTC)
-
-    $ ./check_timezone.sh --warning UTC
-    WARNING: Current timezone is Europe/Paris (expected timezone: UTC)
