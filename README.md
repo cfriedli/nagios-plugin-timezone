@@ -21,6 +21,6 @@ Christian Friedli < christian.friedli -(at)- id.unibe.ch>
     $ ./check_timezone.sh Europe/Zurich
     $ 0:0: OK: Current timezone is Europe/Zurich
 
-    $ ./check_timezone.sh UTC
+    $ ./check_timezone.sh Europe/Zurich
     $ 1:1: Error: Current timezone is Europe/Paris (expected timezone Europe/Zurich)                                                          
 
