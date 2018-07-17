@@ -11,7 +11,7 @@ Christian Friedli < christian.friedli -(at)- id.unibe.ch>
 ## Usage
 
     check_timezone.sh [-h|--help]
-    check_timezone.sh [-w|--warning] EXPECTED_TIMEZONE
+    check_timezone.sh  EXPECTED_TIMEZONE
 
 ## Examples
 
