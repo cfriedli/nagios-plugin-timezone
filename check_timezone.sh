@@ -79,11 +79,11 @@ check_timezone() {
    localtime=$(realpath /etc/localtime)
    current_timezone=${localtime#*/zoneinfo/}
    if [[ "$current_timezone" != "$EXPECTED_TIMEZONE" ]]; then
-       echo "2:1: Current timezone is $current_timezone (expected timezone: $EXPECTED_TIMEZONE)"
+       echo "1:1: Error: Current timezone is $current_timezone (expected timezone: $EXPECTED_TIMEZONE)"
        exit
    fi
 
-   echo "0:0 OK: Current timezone is $EXPECTED_TIMEZONE"
+   echo "0:0: OK: Current timezone is $EXPECTED_TIMEZONE"
 }
 
 
