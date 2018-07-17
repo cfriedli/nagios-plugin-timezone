@@ -28,8 +28,6 @@ Usage: $PLUGIN_FILENAME [-h] EXPECTED_TIMEZONE
 
 Optional arguments:
   -h, --help             Show this help message and exit
-  -w, --warning          Exit warning, instead of critical by default, if
-                         current timezone doesn't match expected one
 
 Required arguments:
   EXPECTED_TIMEZONE      Expected timezone (to get a list of valid timezones,
@@ -45,14 +43,8 @@ parse_arguments() {
     local temp
     temp=$(getopt --name "$PLUGIN_FILENAME"  --options "hw" --longoptions "help,warning" -- "${args[@]:-}")
     eval set -- "$temp"
-
     while true; do
 	case "$1" in
-	    -w | --warning)
-		ERROR_STATE=$STATE_WARNING
-		ERROR_STATE_LABEL="WARNING"
-		shift
-		;;
 	    --)
 		shift
 		break
@@ -78,20 +70,20 @@ parse_arguments() {
 
 
 check_timezone() {
-    echo "2:1: Warning: currently in development"
-#   # Get current timezone
-#   if ! [[ -L /etc/localtime ]]; then
-#       echo "Unable to retrieve current timezone"
-#       exit $STATE_UNKNOWN
-#   fi
-#
-#   localtime=$(realpath /etc/localtime)
-#   current_timezone=${localtime#*/zoneinfo/}
-#   if [[ "$current_timezone" != "$EXPECTED_TIMEZONE" ]]; then
-#       echo "2:1: Current timezone is $current_timezone (expected timezone: $EXPECTED_TIMEZONE)"
-#   fi
-#
-#   echo "0:0 OK: Current timezone is $EXPECTED_TIMEZONE"
+   # Get current timezone
+   if ! [[ -L /etc/localtime ]]; then
+       echo "Unable to retrieve current timezone"
+       exit $STATE_UNKNOWN
+   fi
+
+   localtime=$(realpath /etc/localtime)
+   current_timezone=${localtime#*/zoneinfo/}
+   if [[ "$current_timezone" != "$EXPECTED_TIMEZONE" ]]; then
+       echo "2:1: Current timezone is $current_timezone (expected timezone: $EXPECTED_TIMEZONE)"
+       exit
+   fi
+
+   echo "0:0 OK: Current timezone is $EXPECTED_TIMEZONE"
 }
 
 
